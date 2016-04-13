@@ -30,7 +30,9 @@ namespace reet {
 				if (val.length() > 0 && val[val.length() - 1] == '\r') {
 					val.erase(val.length() - 1, 1);
 				}
-				par.insert(std::make_pair(key, val));
+				if (key != "" && key[0] != '#') {
+					par.insert(std::make_pair(key, val));
+				}
 			}
 			return par;
 		} //getParFromFile()
