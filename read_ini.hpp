@@ -15,7 +15,7 @@
 
 namespace reet {
 	namespace ini {
-		std::map<std::string, std::string> readIni(char const* fn) {
+		inline std::map<std::string, std::string> readIni(char const* fn) {
 			std::map<std::string, std::string> par;
 			//Parameters from wmext.dat
 			std::ifstream fpar(fn, std::ios_base::in | std::ios_base::binary);
